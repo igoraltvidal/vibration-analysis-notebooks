@@ -20,6 +20,12 @@ class ProcessVibrationData:
         # Accelerometer 2 - IMI Sensors, Model 604B31
         self.acc2_max_freq_range = 5000.0
         self.acc2_min_freq_range = 0.5
+
+    def get_all_filenames(self):
+        # Get .csv files from folder
+        # https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
+        filenames = next(walk(self.path2data), (None, None, []))[2]  
+        return filenames
     
     def open_df(self, filename_index = -1):
         # Get .csv files from folder
