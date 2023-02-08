@@ -133,7 +133,9 @@ ui-tests/playwright-report
 
 # CSV and files
 *.csv
-data/
+data/imbalance/
+data/normal/
+data/vertical-misalignment/
 
 # Virtual enviromeent
 venv/
